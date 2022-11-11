@@ -26,7 +26,7 @@ public class Humain {
 	}
 	
 	public void direBonjour() {
-		parler("Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boissonFav);
+		parler("Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boissonFav + ".");
 	}
 	
 	public void boire() {
@@ -36,14 +36,19 @@ public class Humain {
 	
 	public void acheter(String bien, int prix) {
 		if (qteArgent >= prix) {
+			parler("Je viens d'acheter un " + bien);
 			perdreArgent(prix);
 		} else {
 			parler("Je n'ai pas assez d'argent pour acheter un " + bien);
 		}
 	}
 	
+	public void gagnerArgent(int gain) {
+		qteArgent += gain;
+	}
+	
 	public void perdreArgent(int perte) {
-		this.qteArgent -= perte;
+		qteArgent -= perte;
 	}
 	
 
