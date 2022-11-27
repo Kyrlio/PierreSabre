@@ -3,8 +3,8 @@ package personnages;
 public class Commercant extends Humain {
 	private String boissonFav = "thé";
 
-	public Commercant(String nom, String boissonFav, int qteArgent) {
-		super(nom, boissonFav, qteArgent);
+	public Commercant(String nom, int qteArgent) {
+		super(nom, "thé", qteArgent);
 		this.boissonFav = boissonFav;
 		// TODO Auto-generated constructor stub
 	}

@@ -17,7 +17,7 @@ public class HistoireTP4 {
 //		prof.perdreArgent(2);
 //		prof.parler("Je n'ai plus que " + prof.getQteArgent() + " sous en poche. Je ne peux même pas m'offrir un kimono à 50 sous.");
 //		
-		Commercant marco = new Commercant("Marco", "thé", 15);
+		Commercant marco = new Commercant("Marco", 15);
 //		marco.direBonjour();
 //		marco.seFaireExtorquer();
 //		marco.recevoir(15);

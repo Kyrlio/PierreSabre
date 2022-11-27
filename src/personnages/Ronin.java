@@ -5,14 +5,13 @@ public class Ronin extends Humain {
 
 	public Ronin(String nom, String boissonFav, int qteArgent) {
 		super(nom, boissonFav, qteArgent);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void donner(Commercant beneficiaire) {
-		int dix_pourcent = 10 * getQteArgent() / 100;
-		parler(beneficiaire.getNom() + ", prend ces " + dix_pourcent + " sous.");
-		beneficiaire.recevoir(dix_pourcent);
-		perdreArgent(dix_pourcent);
+		int dixPourcent = 10 * getQteArgent() / 100;
+		parler(beneficiaire.getNom() + ", prend ces " + dixPourcent + " sous.");
+		beneficiaire.recevoir(dixPourcent);
+		perdreArgent(dixPourcent);
 	}
 	
 	public void provoquer(Yakuza adversaire) {
@@ -22,11 +21,12 @@ public class Ronin extends Humain {
 			parler("Je t'ai eu petit yakuza!");
 			gagnerArgent(adversaire.getQteArgent());
 			adversaire.perdre();
+			honneur++;
 		} else {
 			parler("J'ai perdu contre ce yakuza, mon honneur et ma bourse ont en pris un coup.");
 			adversaire.gagner(getQteArgent());
 			perdreArgent(getQteArgent());
-			honneur-=1;
+			honneur--;
 		}
 	}
 
